@@ -23,3 +23,7 @@ CRCcheck/.vs/
 getMacAddress/.vs/
 thePing/.idea/
 doTracert/.idea/
+DNS/Debug/
+DNS/DNS.sln
+DNS/DNS.vcxproj
+DNS/DNS.vcxproj.filters
