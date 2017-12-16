@@ -268,15 +268,16 @@ void decodeDNSPacket(char* DNSrecvBuff) {
 		in_addr address;
 		pRESPONSE pResponse;
 		printf("Address:");
-		for (int i = 1; i < answerNum; i++) {
+		printf("%d\n", answerNum);
+		for (int i = 1; i <= answerNum; i++) {
 			// 指针跳过应答记录的域名字段
 			pTraceResponse += sizeof(short);
 			pResponse = (pRESPONSE)pTraceResponse;
 			// 如果是响应报文段
 			if (ntohs(pResponse->type) == 1) {
-				pTraceResponse += sizeof(RESPONSE);
+				pTraceResponse += sizeof(RESPONSE)-2;
 				unsigned long ulIP = *(unsigned long*)pTraceResponse;
-				address.S_un.S_addr = ulIP;
+				address.s_addr = ulIP;
 				if (i == answerNum) {
 					printf("%s.", inet_ntoa(address));
 				}
