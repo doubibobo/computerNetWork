@@ -27,3 +27,9 @@ DNS/Debug/
 DNS/DNS.sln
 DNS/DNS.vcxproj
 DNS/DNS.vcxproj.filters
+thePing/Debug/
+thePing/Debug/thePing.sln
+thePing/thePing.sln
+thePing/thePing/Debug/
+thePing/thePing/thePing.vcxproj
+thePing/thePing/thePing.vcxproj.filters
