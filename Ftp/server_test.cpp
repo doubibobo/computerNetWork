@@ -20,7 +20,7 @@
  
  sockaddr.sin_family = AF_INET;
  sockaddr.sin_addr.s_addr = htonl(INADDR_ANY);
- sockaddr.sin_port = htons(10004);
+ sockaddr.sin_port = htons(10204);
  
  listenfd = socket(AF_INET,SOCK_STREAM,0);
  

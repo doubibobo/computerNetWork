@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     socketfd = socket(AF_INET, SOCK_STREAM, 0);
     memset(&sockaddr, 0, sizeof(sockaddr));
     sockaddr.sin_family = AF_INET;
-    sockaddr.sin_port = htons(10004);
+    sockaddr.sin_port = htons(10204);
     inet_pton(AF_INET, serverINetAddr, &sockaddr.sin_addr);
     if ((connect(socketfd, (struct sockaddr*)&sockaddr, sizeof(sockaddr))) < 0) {
         printf("connect error! %s error: %d\n", strerror(errno), errno);
